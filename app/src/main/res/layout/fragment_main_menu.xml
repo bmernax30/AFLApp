@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bmerna.aflapp.MainMenu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AFL Season XXVII"
+        android:id="@+id/titleText"
+        android:textSize="40sp"
+        android:gravity="center_horizontal" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/historyButton"
+        android:background="@drawable/history"
+        android:onClick="goHistory"
+        android:layout_below="@+id/titleText"
+        android:layout_toEndOf="@+id/archiveButton"
+        android:layout_marginStart="5dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/rulesButton"
+        android:background="@drawable/ref"
+        android:onClick="goRules"
+        android:layout_below="@+id/titleText"
+        android:layout_toEndOf="@+id/scheduleButton"
+        android:layout_marginStart="5dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/coachesButton"
+        android:background="@drawable/coach"
+        android:onClick="goCoaches"
+        android:layout_below="@+id/titleText"
+        android:layout_toEndOf="@+id/standingsButton"
+        android:layout_marginStart="5dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/mainButton"
+        android:background="@drawable/news"
+        android:onClick="goMain"
+        android:layout_below="@+id/titleText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="1dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/scheduleButton"
+        android:background="@drawable/schedule"
+        android:onClick="goSchedule"
+        android:layout_below="@+id/titleText"
+        android:layout_toEndOf="@+id/coachesButton"
+        android:layout_marginStart="5dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/archiveButton"
+        android:background="@drawable/archive"
+        android:onClick="goArchive"
+        android:layout_below="@+id/titleText"
+        android:layout_toEndOf="@+id/rulesButton"
+        android:layout_marginStart="5dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/standingsButton"
+        android:background="@drawable/podium"
+        android:onClick="goStandings"
+        android:layout_below="@+id/titleText"
+        android:layout_toEndOf="@+id/mainButton"
+        android:layout_marginStart="5dp" />
+
+</RelativeLayout>

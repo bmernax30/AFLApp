@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.bmerna.aflapp.Standings27">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Standings"
+            android:id="@+id/titleText"
+            android:layout_below="@+id/mainFragment"
+            android:layout_centerHorizontal="true" />
+
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:name="com.bmerna.aflapp.MainMenu"
+            android:id="@+id/mainFragment"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:layout="@layout/fragment_main_menu" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleText">
+            <TableRow
+                    android:id="@+id/tableHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach"
+                    android:id="@+id/coachTitleText"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp"
+                    android:singleLine="false"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach1"
+                    android:id="@+id/coachTitleText1"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText1"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach2"
+                    android:id="@+id/coachTitleText2"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText2"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText2"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach3"
+                    android:id="@+id/coachTitleText3"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText3"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText3"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach4"
+                    android:id="@+id/coachTitleText4"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText4"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText4"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach5"
+                    android:id="@+id/coachTitleText5"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText5"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText5"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach6"
+                    android:id="@+id/coachTitleText6"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText6"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText6"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach7"
+                    android:id="@+id/coachTitleText7"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText7"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText7"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCoach8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach8"
+                    android:id="@+id/coachTitleText8"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText8"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText8"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            //ROW 9-----------------------------------
+            <TableRow
+                android:id="@+id/tableCoach9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach9"
+                    android:id="@+id/coachTitleText9"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText9"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText9"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            //ROW 10-----------------------------------
+                <TableRow
+                    android:id="@+id/tableCoach10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Coach10"
+                        android:id="@+id/coachTitleText10"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="W"
+                        android:id="@+id/winTitleText10"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="L"
+                        android:id="@+id/lossTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="T"
+                        android:id="@+id/tieTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="%"
+                        android:id="@+id/pctTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF"
+                        android:id="@+id/offenseTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF"
+                        android:id="@+id/defenseTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF AVG"
+                        android:id="@+id/offavgTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF AVG"
+                        android:id="@+id/defavgTitleText10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                </TableRow>
+            //ROW 11-----------------------------------
+                <TableRow
+                    android:id="@+id/tableCoach11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Coach11"
+                        android:id="@+id/coachTitleText11"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="W"
+                        android:id="@+id/winTitleText11"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="L"
+                        android:id="@+id/lossTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="T"
+                        android:id="@+id/tieTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="%"
+                        android:id="@+id/pctTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF"
+                        android:id="@+id/offenseTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF"
+                        android:id="@+id/defenseTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF AVG"
+                        android:id="@+id/offavgTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF AVG"
+                        android:id="@+id/defavgTitleText11"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                </TableRow>
+            //ROW 12-----------------------------------
+                <TableRow
+                    android:id="@+id/tableCoach12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Coach12"
+                        android:id="@+id/coachTitleText12"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="W"
+                        android:id="@+id/winTitleText12"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="L"
+                        android:id="@+id/lossTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="T"
+                        android:id="@+id/tieTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="%"
+                        android:id="@+id/pctTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF"
+                        android:id="@+id/offenseTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF"
+                        android:id="@+id/defenseTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF AVG"
+                        android:id="@+id/offavgTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF AVG"
+                        android:id="@+id/defavgTitleText12"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                </TableRow>
+            //ROW 13-----------------------------------
+                <TableRow
+                    android:id="@+id/tableCoach13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Coach13"
+                        android:id="@+id/coachTitleText13"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="W"
+                        android:id="@+id/winTitleText13"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="L"
+                        android:id="@+id/lossTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="T"
+                        android:id="@+id/tieTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="%"
+                        android:id="@+id/pctTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF"
+                        android:id="@+id/offenseTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF"
+                        android:id="@+id/defenseTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="OFF AVG"
+                        android:id="@+id/offavgTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DEF AVG"
+                        android:id="@+id/defavgTitleText13"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="10sp" />
+                </TableRow>
+            //ROW 14-----------------------------------
+            <TableRow
+                android:id="@+id/tableCoach14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach14"
+                    android:id="@+id/coachTitleText14"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText14"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText14"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+            //ROW 15-----------------------------------
+            <TableRow
+                android:id="@+id/tableCoach15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coach15"
+                    android:id="@+id/coachTitleText15"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="W"
+                    android:id="@+id/winTitleText15"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="L"
+                    android:id="@+id/lossTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="T"
+                    android:id="@+id/tieTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="%"
+                    android:id="@+id/pctTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF"
+                    android:id="@+id/offenseTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF"
+                    android:id="@+id/defenseTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="OFF AVG"
+                    android:id="@+id/offavgTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="DEF AVG"
+                    android:id="@+id/defavgTitleText15"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10sp" />
+            </TableRow>
+
+        </TableLayout>
+    </RelativeLayout>
+</ScrollView>
