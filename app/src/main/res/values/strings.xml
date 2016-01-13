@@ -4,4 +4,21 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="coaches">
+        <item>Delaney</item>
+        <item>Captain</item>
+        <item>Dirty Randy</item>
+        <item>T-Bone</item>
+        <item>Grungy</item>
+        <item>Caine</item>
+        <item>Supreme</item>
+        <item>Thadd</item>
+        <item>Gags</item>
+        <item>AFLKyle</item>
+        <item>Paul</item>
+        <item>BLSmooth</item>
+        <item>Rico</item>
+        <item>Coach Z</item>
+        <item>BFH</item>
+    </string-array>
 </resources>

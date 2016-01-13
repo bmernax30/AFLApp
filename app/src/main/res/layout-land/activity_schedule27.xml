@@ -15,6 +15,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bmerna.aflapp.Schedule27">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Schedule"
+        android:id="@+id/coachSchedule"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,8 +45,8 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/spinner">
+        android:layout_below="@+id/coachSchedule"
+        android:layout_centerHorizontal="true">
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
